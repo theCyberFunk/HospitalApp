@@ -1,0 +1,141 @@
+@use 'root';
+@import 'partials/navbar';
+@import 'partials/footer';
+@import 'partials/help';
+
+
+body{
+    text-align: center;
+}
+.section{
+    padding: 1rem;
+}
+
+
+.banner{
+    width: 100%;
+    height: 20rem;
+    background-image: url("../images/contactUs.png");
+    background-size: cover;
+    color: #ffffff;
+    display: grid;
+    padding: 0;
+    main{
+        align-self: center;
+        padding: 1rem;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        h1{
+            align-self: end;
+            margin-bottom: 1rem;
+        }
+        p{
+            margin-top: 1rem;
+        }
+    }
+}
+
+
+.main{
+    padding: 1.5rem;
+    text-align: left;
+    .wrapper{
+        padding: 0.7rem;
+        border: 1px solid #d3d3d3;
+        display: grid;
+        grid-row-gap: 2rem;
+        main{
+            border-top: 1px dashed #d3d3d3;
+            .info{
+                header{
+                    display: grid;
+                    grid-template-columns: auto 2rem;
+                    align-items: center;
+                    border-bottom: 1px dashed #d3d3d3;
+                    i,h4{
+                        color: root.$midblue;
+                    }
+                    i{
+                        justify-self: end;
+                    }
+                    h4{
+                        justify-self: start;
+                        margin-left: 0;
+                    }
+                }
+                main{
+                    p{
+                        background-color: rgb(220, 236, 241);
+                        padding: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 412px) and (max-width: 768px){
+
+    .section{
+        padding: 2rem;
+    }
+    .nav{
+        padding-top: initial;
+        padding-bottom: initial;
+    }
+
+    .banner{
+        padding: 0;
+    }
+
+
+
+    .main .wrapper{
+        padding: 1.5rem;
+        p{
+            line-height: 1.5rem;
+        }
+    }
+
+}
+
+
+
+
+@media screen and (min-width: 769px){
+    .section{
+        padding: 3rem 5rem 3rem 5rem;
+    }
+    .nav{
+        padding-top: initial;
+        padding-bottom: initial;
+    }
+
+    .banner{
+        padding: 0;
+        main{
+            padding: 5rem;
+            justify-self: start;
+            p{
+                justify-self: left;
+                margin-left: 0;
+            }
+        }
+    }
+
+
+
+    .main .wrapper{
+        padding: 3rem;
+        p{
+            line-height: 1.5rem;
+        }
+    }
+
+}

@@ -1,0 +1,36 @@
+<div class="navbar section">
+    <nav>
+        <img src="/images/Logo.jpg" alt = 'logo' onclick="window.location.href = '/';">
+        <div class="navbar-menu">
+            <ul type="none">  
+                <li><a href="/doctors">Doctors</a></li>
+                <li><a href="/hospitals">Hospitals</a></li>
+                <li><a href="/treatment">Treatment</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </div>
+        <% if(!currentUser){  %>
+        <div class="navbar-buttons">
+            <button class="login-button" onclick="window.location.href = '/login';">
+                Login / Sign Up
+            </button>
+        </div>
+        <%} else{ %>
+            <div class="user">
+                <button class="user-button" onclick="window.location.href = '/profile';"><%= currentUser.name%></button>
+                <button class="logout-button" onclick="window.location.href = '/logout';"> Logout </button>
+            </div>
+        <% } %>
+        <i class="fa fa-bars"></i>
+    </nav>
+</div>
+<div class="nav-dropdown hidden">
+    <ul type="none">
+        <li><a href="/doctors">Doctors</a></li>
+        <li><a href="/hospitals">Hospitals</a></li>
+        <li><a href="/treatment">Treatment</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+</div>

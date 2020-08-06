@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TVASTRA login</title>
+        <link rel="stylesheet" href="/stylesheets/reset.css">
+        <link rel="stylesheet" href="/stylesheets/root.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet"  href="/stylesheets/login.css">
+    </head>
+    <body>
+        
+        <div class="section">
+            <nav>
+                <img src="/images/Logo.jpg" alt = 'logo'>
+                <div class="navbar-menu">
+                    <ul type="none">  
+                        <li><a href="/doctors">Doctors</a></li>
+                        <li><a href="/hospitals">Hospitals</a></li>
+                        <li><a href="/treatment">Treatment</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-buttons">
+                    <button class="login-button">
+                        Login / Sign Up
+                    </button>
+                    <button class="get-quote-button">
+                        Get a Quote
+                    </button>
+                </div>
+                <i class="fa fa-bars"></i>
+            </nav>
+        </div>
+        <div class="nav-dropdown">
+            <ul type="none">  
+                <li><a href="/doctors">Doctors</a></li>
+                <li><a href="/hospitals">Hospitals</a></li>
+                <li><a href="/treatment">Treatment</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/about">About</a></li>
+                <li><button class="cross">X</button></li>
+            </ul>
+        </div>
+        <!-- navbar end -->
+
+        <div class="main">
+            <div class="box">
+                <div class="head">
+                    <h4>Login</h4>
+                </div>
+                <form action="/login" method="POST">
+                    <input type="text"  name="username" placeholder="Enter Username">
+                    <input type="password" name="password" placeholder="Enter Password">
+                    <button>L O G I N<i class="fas fa-arrow-right"></i></button>
+                    <p>Not registered? <a href="/signup">Sign Up</a></p>
+                </form>
+            </div>
+            
+            <div class="footer">
+                <p>All Rights Reserved. © tvastra 2020</p>
+            </div>
+        </div>
+
+    </body>
+    <script type="text/javascript" src="/javascript/login.js"></script>
+
+</html>

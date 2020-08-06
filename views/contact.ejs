@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TVASTRA Contact Us</title>
+        <link rel="stylesheet" href="/stylesheets/reset.css">
+        <link rel="stylesheet" href="/stylesheets/root.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet"  href="/stylesheets/contact.css">
+    </head>
+    <body>
+
+        <%- include('partials/navbar')  %>
+
+
+        
+        <div class="banner section">
+            <h1>Contact Us</h1>
+            <p>Home / Contact Us</p>
+        </div>
+
+
+
+        <div class="main section">
+
+            <div class="map">
+
+            </div>
+
+            <div class="message">
+                <div class="details">
+                    <div class="detail">
+                        <i class="fas fa-home"></i>
+                        <div>
+                            <h4>Noida, India</h4>
+                            <p>Sector 45</p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>00 (440) 9547 611</h4>
+                            <p>Mon to Fri 9am to 6pm</p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-home"></i>
+                        <div>
+                            <h4>support@tvastra.com</h4>
+                            <p>Send us your query anytime!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="">
+                    <input class="input1" type="text" placeholder="Enter your name">
+                    <input class="input2" type="text" placeholder="Enter email address">
+                    <input class="input3" type="text" placeholder="Enter subject">
+                    <!-- <input class="input4" type="" placeholder="Enter Message"> -->
+                    <textarea name="" id="input4" cols="30" rows="20" placeholder="Enter Message"></textarea>
+                    <button>Send Message</button>
+                </form>
+
+            </div>
+
+
+        </div>
+       
+        <%- include('partials/footer')  %>
+        
+    </body>
+    <script type="text/javascript" src="/javascript/contact.js"></script>
+</html>

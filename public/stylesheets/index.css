@@ -1,0 +1,846 @@
+@font-face {
+  font-family: "NexaBold";
+  src: url("../font/Nexa-Bold.otf");
+}
+@font-face {
+  font-family: "Nexalight";
+  src: url("../font/Nexa-Light.otf");
+}
+h1, h2, h3, h4 {
+  font-family: "NexaBold";
+  margin: 1rem auto 1rem auto;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0.5rem auto 0.5rem auto;
+}
+
+body {
+  font-family: "NexaLight";
+  box-sizing: border-box;
+  max-width: 100%;
+  font-size: 1rem;
+}
+
+button {
+  border: none;
+  border-radius: 3%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+input {
+  border: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 412px) and (max-width: 768px) {
+  h1 {
+    font-size: 2.05rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.55rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  body {
+    font-size: 1.05rem;
+  }
+
+  h1, h2, h3, h4 {
+    margin: 1.5rem auto 1.5rem auto;
+  }
+}
+@media screen and (min-width: 769px) {
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  body {
+    font-size: 1.1rem;
+  }
+
+  h1, h2, h3, h4 {
+    margin: 2rem auto 2rem auto;
+  }
+}
+.hidden {
+  display: none;
+}
+
+nav {
+  background-color: white;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img {
+  height: 50%;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+nav .navbar-menu {
+  display: none;
+}
+nav .navbar-menu a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #021433;
+}
+nav .navbar-buttons {
+  display: none;
+}
+nav .fa {
+  color: #525659;
+  font-size: 1.5rem;
+  margin: auto 0.5rem;
+}
+
+.nav-dropdown {
+  padding: 1rem;
+}
+.nav-dropdown ul {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 0.7rem;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  color: #021433;
+}
+.nav-dropdown ul a {
+  text-decoration: none;
+  color: #021433;
+}
+
+@media screen and (min-width: 769px) {
+  nav {
+    height: 5rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  nav img {
+    height: 40%;
+    margin-left: 0;
+  }
+  nav .navbar-menu {
+    display: block;
+  }
+  nav .navbar-menu ul {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    padding: 0;
+    grid-gap: 1rem;
+  }
+  nav .fa {
+    display: none;
+  }
+  nav .navbar-buttons {
+    display: block;
+  }
+  nav .navbar-buttons button {
+    height: 2.3rem;
+    width: 9rem;
+    border-radius: 5%;
+  }
+  nav .navbar-buttons .login-button {
+    background-color: white;
+    border: 1px solid #021433;
+  }
+}
+.footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: #021433;
+  color: #cccccc;
+  border-bottom: 0.5rem solid #0099ff;
+  grid-row-gap: 1rem;
+}
+.footer img {
+  height: 40px;
+}
+.footer a {
+  text-decoration: none;
+}
+.footer h2 {
+  color: white;
+}
+.footer p {
+  font-size: small;
+}
+.footer ul {
+  padding: 0;
+}
+.footer li {
+  margin-bottom: 0.5rem;
+}
+.footer .icons {
+  display: none;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  justify-items: center;
+  align-items: center;
+  grid-column-gap: 0.5rem;
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+@media screen and (min-width: 412px) and (max-width: 768px) {
+  .footer {
+    color: #021433;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto auto;
+    justify-items: start;
+  }
+  .footer .follow {
+    display: none;
+  }
+  .footer h2 {
+    display: none;
+  }
+  .footer ul {
+    display: grid;
+    align-items: center;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-template-columns: auto auto auto auto auto;
+  }
+  .footer ul li {
+    margin-right: 1rem;
+  }
+  .footer img {
+    grid-column-start: 2;
+    justify-self: end;
+  }
+  .footer p {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    font-size: large;
+    margin-left: 0;
+  }
+  .footer .icons {
+    display: grid;
+    margin-right: 2rem;
+    justify-self: end;
+  }
+  .footer a {
+    color: #021433;
+  }
+}
+@media screen and (min-width: 769px) {
+  .footer {
+    color: #021433;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: auto auto;
+    justify-items: start;
+  }
+  .footer .follow {
+    display: none;
+  }
+  .footer h2 {
+    display: none;
+  }
+  .footer ul {
+    display: grid;
+    align-items: center;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-template-columns: auto auto auto auto auto;
+  }
+  .footer ul li {
+    margin-right: 1rem;
+  }
+  .footer img {
+    grid-column-start: 2;
+    justify-self: end;
+  }
+  .footer p {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    font-size: large;
+    margin-left: 0;
+  }
+  .footer .icons {
+    display: grid;
+    margin-right: 2rem;
+    justify-self: end;
+  }
+  .footer a {
+    color: #021433;
+  }
+}
+.help {
+  text-align: center;
+  background-color: #8fcaf1;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 100%;
+  justify-items: center;
+  align-items: center;
+}
+.help h1 {
+  color: white;
+}
+.help button {
+  background-color: #0099ff;
+  color: white;
+  width: 12rem;
+  height: 4rem;
+  font-size: large;
+  border: none;
+  border-radius: 3%;
+}
+
+@media screen and (min-width: 769px) {
+  .help {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    align-items: center;
+  }
+  .help div {
+    justify-self: start;
+  }
+  .help h1, .help p {
+    text-align: left;
+  }
+  .help button {
+    justify-self: end;
+  }
+}
+.banner {
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+  background-image: url("../images/img1.jpg");
+  background-size: cover;
+  text-align: center;
+  padding: 1rem;
+}
+.banner form {
+  margin: 1rem auto 1rem auto;
+  display: grid;
+  grid-template-columns: 3rem 15rem 3rem;
+  grid-template-rows: 3rem 3rem 3rem;
+  grid-row-gap: 1rem;
+}
+.banner form .loc, .banner form .gps, .banner form .search, .banner form .location {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+.banner form img {
+  height: 50%;
+  margin-top: 0.75rem;
+}
+.banner form .location {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.banner form .location input {
+  width: 80%;
+  height: 100%;
+}
+.banner form .search {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.banner form .search input {
+  width: 80%;
+  height: 100%;
+}
+.banner form .btn {
+  width: 100%;
+  height: 100%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.banner form .btn button {
+  background-color: #021433;
+  color: white;
+  width: 10rem;
+  height: 100%;
+}
+.banner form .btn button:hover {
+  background-color: #0099ff;
+}
+
+.process .container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  margin-bottom: 1rem;
+  color: #2A2D3E;
+  background-color: white;
+}
+.process .container .heading {
+  text-align: center;
+  margin-top: 1rem;
+}
+.process .container .paragraph {
+  text-align: center;
+  padding: 1rem;
+}
+.process .container .grid {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+}
+.process .container .grid .list {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 14% 14% 14% 14% 14% 14% 14% auto;
+  padding: 1rem 2rem;
+  grid-row-gap: 0.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.process .container .grid .list .list-item {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  border: 1px solid #969696;
+  border-radius: 6px;
+  padding: 1.3rem;
+  align-items: center;
+  transition: 0.5s;
+}
+.process .container .grid .list .list-item p {
+  color: #969696;
+}
+.process .container .grid .list .list-item .option {
+  padding-left: 7px;
+  text-align: left;
+  margin-left: 0;
+}
+.process .container .grid .list .list-item:hover {
+  border: 1px solid #021433;
+  background-color: #cce6ff;
+  cursor: pointer;
+}
+.process .container .grid .list .list-item:hover p {
+  color: #021433;
+}
+.process .container .details {
+  width: 100%;
+  text-align: center;
+}
+.process .container .details img {
+  width: 70%;
+  object-fit: cover;
+}
+.process .container .details h2 {
+  padding: 0 1rem;
+  text-align: center;
+}
+.process .container .details p {
+  padding: 1.1rem;
+  text-align: center;
+}
+
+.doctors {
+  background-color: #021433;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+}
+.doctors .holder {
+  margin: 2rem 15% auto 15%;
+}
+.doctors .holder .card {
+  border-bottom: 0.4rem solid #0099ff;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin: auto auto 1rem auto;
+}
+.doctors .holder .card .info {
+  display: grid;
+  grid-template-columns: 95%;
+  align-items: end;
+}
+.doctors .holder .card .image {
+  width: 100%;
+  height: 280px;
+}
+.doctors .holder .card img {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  object-fit: cover;
+}
+.doctors .holder .card #name {
+  position: relative;
+  color: #0099ff;
+  font-weight: bolder;
+}
+.doctors .holder .card h4, .doctors .holder .card p {
+  line-height: 1.2rem;
+  margin-left: 3rem;
+  margin-bottom: 0.2rem;
+  text-align: left;
+  color: #291433;
+}
+.doctors .holder .card #name:before {
+  content: "";
+  position: absolute;
+  top: calc(100% - 5px);
+  left: -48px;
+  width: 35px;
+  height: 3px;
+  background-color: #0099ff;
+}
+
+.treatments {
+  padding: 1rem;
+  background-color: white;
+  color: #021433;
+  display: grid;
+  grid-template-columns: 100%;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+.treatments .holder {
+  margin: 2rem auto 2rem auto;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.treatments .holder .card {
+  position: relative;
+  width: 350px;
+  height: 400px;
+  background-size: cover;
+  background-position: 50% 0%;
+  margin-bottom: 1rem;
+}
+.treatments .holder .card .name {
+  position: absolute;
+  bottom: 3rem;
+  left: 5%;
+  color: white;
+  font-weight: bolder;
+}
+.treatments .holder .card .number {
+  position: absolute;
+  bottom: 1rem;
+  left: 5%;
+  color: white;
+}
+.treatments .holder .card-1 {
+  background-image: linear-gradient(to top, #010916ff, #01091600), url("../images/image--010.jpg");
+}
+.treatments .holder .card-2 {
+  background-image: linear-gradient(to top, #010916ff, #01091600), url("../images/image--009.jpg");
+}
+.treatments .holder .card-3 {
+  background-image: linear-gradient(to top, #010916ff, #01091600), url("../images/image--008.jpg");
+}
+.treatments .holder .card-4 {
+  background-image: linear-gradient(to top, #010916ff, #01091600), url("../images/image--011.jpg");
+}
+.treatments .holder .card-5 {
+  background-image: linear-gradient(to top, #010916ff, #01091600), url("../images/image--000.jpg");
+}
+.treatments .holder .card-6 {
+  background-image: linear-gradient(to top, #010916ff, #01091600), url("../images/image--006.jpg");
+}
+
+.misc {
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+  background-color: #ededed;
+  padding: 1rem;
+  color: #021433;
+  text-align: center;
+}
+.misc .grid {
+  display: grid;
+  grid-template-columns: 150px 150px;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 1rem 1rem;
+  margin: 2rem auto 2rem auto;
+}
+.misc .grid .item {
+  background-color: lightgrey;
+  border-radius: 3%;
+  width: 100%;
+}
+.misc .grid h4 {
+  margin-top: 0;
+  color: grey;
+}
+
+@media screen and (min-width: 412px) and (max-width: 768px) {
+  .process .container .grid {
+    grid-template-columns: auto auto;
+  }
+  .process .container .grid .list {
+    grid-template-rows: 14.285% 14.285% 14.285% 14.285% 14.285% 14.285% 14.285%;
+  }
+  .process .container .grid .list .list-item {
+    grid-template-columns: 15% 85%;
+  }
+  .process .container .grid .details img {
+    width: 80%;
+  }
+  .process .container .grid .details h2 {
+    padding: 1rem 1rem 0rem;
+  }
+  .process .container .grid .details p {
+    padding: 1.1rem 2rem;
+  }
+
+  .doctors .holder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem 1rem;
+    align-items: stretch;
+    margin: 2rem 1rem 2rem 1rem;
+  }
+  .doctors .holder .card {
+    margin: auto;
+  }
+
+  .treatments .holder {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px 300px;
+    grid-gap: 1rem 1rem;
+  }
+  .treatments .holder .card {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    justify-self: center;
+  }
+
+  .misc .grid {
+    grid-template-columns: 150px 150px 150px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .section {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .banner {
+    text-align: left;
+    display: block;
+  }
+  .banner h1, .banner p {
+    margin-left: 0;
+  }
+  .banner h1 {
+    margin-top: 10rem;
+  }
+  .banner p {
+    grid-row-start: 2;
+    margin-bottom: 3rem;
+  }
+  .banner form {
+    grid-template-columns: 3rem 12rem 3rem 21rem 10rem;
+    grid-template-rows: 3rem 0 0;
+    grid-row-gap: 0;
+    margin-bottom: 3rem;
+  }
+  .banner form img {
+    margin-left: 0.75rem;
+  }
+  .banner form .search {
+    grid-column-start: 4;
+    grid-column-end: 5;
+  }
+  .banner form .btn {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .process .container {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: #2A2D3E;
+  }
+  .process .container .heading {
+    text-align: left;
+  }
+  .process .container .paragraph {
+    text-align: left;
+    margin: 0% 0% 5% 0%;
+    padding: 0;
+  }
+  .process .container .grid {
+    display: grid;
+    grid-template-columns: 35% auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .process .container .grid .list {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 14.285% 14.285% 14.285% 14.285% 14.285% 14.285% 14.285%;
+    padding: 1rem 0rem;
+    grid-row-gap: 0.5rem;
+    text-align: center;
+    margin-bottom: 8rem;
+  }
+  .process .container .grid .list .list-item {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 2rem 1rem;
+    align-items: center;
+  }
+  .process .container .grid .details {
+    width: 100%;
+    text-align: center;
+    margin-left: 2.5rem;
+  }
+  .process .container .grid .details img {
+    width: 70%;
+    object-fit: cover;
+  }
+  .process .container .grid .details h2 {
+    margin-top: 1rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  .process .container .grid .details p {
+    margin: 0 8rem;
+    padding: 1.1rem 5rem;
+    text-align: center;
+  }
+
+  .doctors h1, .doctors p {
+    text-align: left;
+  }
+  .doctors .holder {
+    margin: 2rem 1rem 2rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: stretch;
+    grid-gap: 0 1rem;
+  }
+  .doctors .holder .card {
+    margin: auto;
+  }
+
+  .treatments {
+    text-align: left;
+  }
+  .treatments h1, .treatments p {
+    align-self: start;
+    margin-left: 0;
+  }
+  .treatments .holder {
+    width: 100%;
+    margin: 2rem auto 2rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 50px 50px 50px 50px 200px;
+    grid-gap: 0.7rem 0.7rem;
+  }
+  .treatments .holder .card {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    justify-self: center;
+  }
+  .treatments .holder .card .name, .treatments .holder .card .number {
+    left: -2rem;
+  }
+  .treatments .holder .card p {
+    margin-left: 3rem;
+  }
+  .treatments .holder .card-1 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .treatments .holder .card-2 {
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+  .treatments .holder .card-3 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .treatments .holder .card-4 {
+    grid-row-start: 2;
+    grid-row-end: 7;
+  }
+  .treatments .holder .card-5 {
+    grid-row-start: 4;
+    grid-row-end: 7;
+  }
+  .treatments .holder .card-6 {
+    grid-row-start: 3;
+    grid-row-end: 7;
+  }
+
+  .misc {
+    display: block;
+  }
+  .misc h1, .misc p {
+    text-align: left;
+  }
+  .misc .grid {
+    grid-template-columns: 15% 15% 15% 15% 15% 15%;
+    margin-left: 1.5rem;
+    grid-gap: 0.9rem;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

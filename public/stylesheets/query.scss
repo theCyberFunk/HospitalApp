@@ -1,0 +1,131 @@
+@use 'root';
+@import 'partials/navbar';
+
+
+
+.main{
+    background-color: root.$lightblue;
+    width: 100%;
+    height: 45rem;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 5rem;
+    justify-items: center;
+    align-items: center;
+    .box{
+        width: 90%;
+        height: 35rem;
+        background-color: white;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        justify-items: center;
+        .head{
+            width: 100%;
+            border-bottom: 1px solid lightgray;
+            display: grid;
+            justify-items: center;
+            color: root.$midblue;
+        }
+        form{
+            width: 80%;
+            display: grid;
+            grid-row-gap: 1rem;
+            grid-template-rows: 3rem 3rem 3rem auto 3rem;
+            align-items: center;
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+            input,button{
+                height: 100%;
+            }
+            input{
+                border: 1px solid lightgray;
+                border-radius: 0.2rem;
+                padding-left: 1rem;
+            }
+            button{
+                background-color: root.$darkblue;
+                color: white;
+                font-size: 1.1rem;
+                font-weight: bold;
+                padding-left: 5.5rem;
+                span{
+                    margin-left: 0.5rem;
+                }
+                i{
+                    margin-left: 30%;
+                }
+            }
+            p{
+                font-size: 0.9rem;
+                font-weight: bold;
+                a{
+                    color: root.$midblue;
+                }
+            }
+        }
+    }
+    .footer{
+        display: grid;
+        grid-template-columns: auto;
+        p{
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+    }
+}
+
+
+
+// BEGIN TABLET VIEW
+
+@media screen and (min-width: 412px) and (max-width: 768px){
+    .main{
+        height: 65rem;
+        .box{
+            width: 65%;
+            height: 45rem;
+            form{
+                button{
+                    padding-left: 37%;
+                    i{
+                        margin-left: 50%;
+                    }
+                }
+            }
+        }
+        .footer{
+            align-self: end;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+
+
+// BEGIN DESKTOP VIEW
+
+@media screen and (min-width: 769px){
+    .section{
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    .main{
+        height: 75rem;
+        .box{
+            width: 70%;
+            height: 60rem;
+            form{
+                button{
+                    padding-left: 35%;
+                    i{
+                        margin-left: 55%;
+                    }
+                }
+            }
+        }
+        .footer{
+            align-self: end;
+            margin-bottom: 2rem;
+        }
+    }
+}

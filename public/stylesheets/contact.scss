@@ -1,0 +1,166 @@
+@use 'root';
+@import 'partials/navbar';
+@import 'partials/footer';
+
+
+.banner{
+    width: 100%;
+    height: 15rem;
+    background-image: url("../images/contactUs.png");
+    background-size: cover;
+    color: #ffffff;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    h1{
+        align-self: end;
+        margin-bottom: 1rem;
+    }
+    p{
+        margin-top: 1rem;
+    }
+}
+
+
+
+.main{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    .map{
+        margin-top: 1.5rem;
+        width: 90%;
+        background-color: root.$lightblue;
+        height: 13rem;
+        margin-bottom: 2rem;
+    }
+    .message{
+        width: 100%;
+        .details{
+            padding: 1.5rem;
+            .detail{
+                display: grid;
+                grid-template-columns: 4rem auto;
+                align-items: center;
+                i{
+                    font-size: 1.5rem;
+                    color: root.$midblue;
+                    justify-self: center;
+                }
+            }
+        }
+        form{
+            background-color: root.$lightblue;
+            padding: 1.5rem;
+            display: grid;
+            grid-template-rows: 3rem 3rem 3rem 3rem 3rem ;
+            grid-gap: 1rem 1rem;
+            input{
+                padding-left: 1rem;
+            }
+            button{
+                width: 10rem;
+                justify-self: end;
+                background-color: root.$midblue;
+                font-size: 1.2rem;
+                color: #ffffff;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+
+
+// BEGIN TABLET VIEW
+
+@media screen and (min-width: 412px) and (max-width: 768px){
+    .main{
+        .map{
+            height: 22rem;
+        }
+        .message{
+            .details{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                
+            }
+            form{
+                grid-template-rows: 3rem 3rem 3rem 3rem ;
+                grid-template-columns: 1fr 1fr;
+                .input2{
+                    grid-column-start: 0;
+                    grid-row-start: 2;
+                }
+                .input3{
+                    grid-column-start: 0;
+                    grid-row-start: 3;
+                }
+                #input4{
+                    grid-row-start: 1;
+                    grid-row-end: 4;
+                }
+                button{
+                    grid-column-start: 2;
+                }
+            }
+        }
+    }
+}
+
+
+
+// BEGIN DESKTOP VIEW
+@media screen and (min-width: 769px){
+    .section{
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    
+
+    .banner{
+        padding-left: 0;
+        padding-right: 0;
+        h1,p{
+            margin-left: 5rem;
+        }
+    }
+
+
+    .main{
+        .map{
+            width: 100%;
+            height: 25rem;
+        }
+        .message{
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #d3d3d3;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            .detail{
+                h4{
+                    margin-top: 0.9rem;
+                    margin-bottom: 0.9rem;
+                }
+            }
+            form{
+                grid-template-rows: 3rem 3rem 3rem 3rem ;
+                grid-template-columns: 1fr 1fr;
+                .input2{
+                    grid-column-start: 0;
+                    grid-row-start: 2;
+                }
+                .input3{
+                    grid-column-start: 0;
+                    grid-row-start: 3;
+                }
+                #input4{
+                    grid-row-start: 1;
+                    grid-row-end: 4;
+                }
+                button{
+                    grid-column-start: 2;
+                }
+            }
+        }
+    }
+}
