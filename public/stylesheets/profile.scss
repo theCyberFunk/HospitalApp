@@ -1,0 +1,91 @@
+@use 'root';
+@import 'partials/navbar';
+
+html,body{
+    min-height: 100%;
+}
+.section{
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+main{
+    padding: 5rem;
+    min-height: 45rem;
+    background-color: root.$lightblue;
+    display: grid;
+    grid-template-rows: 15rem auto;
+    grid-row-gap: 2rem;
+    place-content: center;
+    div{
+        background-color: #ffffff;
+        width: 50rem;
+    }
+    #user{
+        display: grid;
+        grid-template-columns: 10rem auto;
+        #image{
+            height: 100%;
+            width: 10rem;
+            background-color: #d3d3d3;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        ul{
+            height: 100%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 1fr 1fr 1fr;
+            align-items: center;
+            li{
+                display: grid;
+                grid-template-columns: 3rem 1fr;
+                i{
+                    color: root.$midblue;
+                    justify-self: center;
+                    align-self: center;
+                }
+                span{
+                    word-wrap: break-word;
+                    max-width: 15rem;
+                }
+            }
+        }
+    }
+    #messages{
+        i{
+            color: root.$midblue;
+            justify-self: center;
+            align-self: center;
+            cursor: pointer;
+        }
+        .message{
+            display: grid;
+            grid-template-columns: 4rem 1fr;
+            ul{
+                display: grid;
+                grid-row-gap: 0.5rem;
+                align-self: center;
+                margin: 1rem 0;
+                h4{
+                    margin: 0;
+                }
+                #name{
+                    display: grid;
+                    grid-template-columns: auto 1fr;
+                    grid-column-gap: 0.5rem;
+                    #email{
+                        font-size: 0.95rem;
+                        align-self: end;
+                    }
+                }
+                #message{
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    
+}

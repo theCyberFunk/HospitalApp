@@ -1,1 +1,57 @@
-<%= currentUser %>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TVASTRA login</title>
+        <link rel="stylesheet" href="/stylesheets/reset.css">
+        <link rel="stylesheet" href="/stylesheets/root.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet"  href="/stylesheets/profile.css">
+    </head>
+    <body>
+        <%- include('partials/navbar')  %>
+        
+        <main class="section">
+            <% if(currentUser.auth === 'user'){ %>
+            <div id="user">
+                <div id="image">
+                    <img src= "<%= currentUser.image %>" alt="">
+                </div>
+                <ul type="none">
+                    <li><i class="fas fa-user-circle"></i><span><%= currentUser.name %></span></li>
+                    <li><i class="fas fa-at"></i><span><%= currentUser.email %></span></li>
+                    <li><i class="fas fa-venus-mars"></i><span><%= currentUser.gender %></span></li>
+                    <li><i class="fas fa-city"></i><span><%= currentUser.city %>, <%= currentUser.state %></span></li>
+                    <li><i class="fas fa-flag"></i><span><%= currentUser.country %></span></li>
+                </ul>
+            </div>
+            <% } %>
+            
+            <div id="messages">
+                <% messages.forEach(function(message){ %>
+                <div class="message">
+                    <i class="fas fa-envelope"></i>
+                    <ul type="none">
+                        <li id="name"><h4><%= message.name %></h4><span id="email" class="hidden"><%= message.email %></span></li>
+                        <li id="subject"><%= message.subject %></li>
+                        <p id="message" class="hidden"><%= message.message %></p>
+                    </ul>
+                </div>
+                <% }); %>
+            </div>
+
+            <div id="appointments">
+                <% appointments.forEach(function(appointment){ %>
+                    <div class="appointment">
+                        <i class="fas "></i>
+                        <ul type="none">
+                            
+                        </ul>
+                    </div>
+                    <% }); %>
+            </div>
+        </main>
+
+    </body>
+    <script type="text/javascript" src="/javascript/profile.js"></script>
+</html>

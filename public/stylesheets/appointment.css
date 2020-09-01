@@ -173,24 +173,16 @@ nav .fa {
     display: none;
   }
   nav .navbar-buttons {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 0.5rem;
+    display: block;
   }
   nav .navbar-buttons button {
-    height: 2rem;
-    width: 8rem;
+    height: 2.3rem;
+    width: 9rem;
     border-radius: 5%;
   }
   nav .navbar-buttons .login-button {
     background-color: white;
-    border-color: #021433;
-    border: 1px solid;
-  }
-  nav .navbar-buttons .get-quote-button {
-    background-color: #021433;
-    color: white;
-    border: none;
+    border: 1px solid #021433;
   }
 }
 .main {
@@ -249,6 +241,12 @@ nav .fa {
 .main .box form .form-section .option input {
   margin: 0;
   justify-self: center;
+}
+.main .box form .form-section #image {
+  border: none;
+  width: fit-content;
+  height: fit-content;
+  padding: 0;
 }
 .main .box form .form-section input {
   width: calc(100%-16px);

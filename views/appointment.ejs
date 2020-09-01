@@ -17,35 +17,35 @@
                 <div class="head">
                     <h4>Book an Appointment</h4>
                 </div>
-                <form action="">
+                <form action="/appointment" method="POST" enctype="multipart/form-data">
                     <div class="form-section">
                         <p>Select Appointment Date*</p>
-                        <input class="input1" type="date">
+                        <input class="input1" type="date" name="date">
                     </div>
                     <div class="form-section">
                         <p>Time Interval*</p>
                         <ul>
-                            <div class="option"><input type="radio"><label for="">Morning</label></div>
-                            <div class="option"><input type="radio"><label for="">Afternoon</label></div>
-                            <div class="option"><input type="radio"><label for="">Evening</label></div>
+                            <div class="option"><input type="radio" name="time" id="morning" value="Morning"><label for="morning">Morning</label></div>
+                            <div class="option"><input type="radio" name="time" id="afternoon" value="Afternoon"><label for="afternoon">Afternoon</label></div>
+                            <div class="option"><input type="radio" name="time" id="evening" value="Evening"><label for="evening">Evening</label></div>
                         </ul>
                     </div>
                     <div class="form-section">
                         <p>Appointment Status / Urgency*</p>
                         <ul>
-                            <div class="option"><input type="radio"><label for="">Routine Check-up</label></div>
-                            <div class="option"><input type="radio"><label for="">Non Urgent Check-up</label></div>
-                            <div class="option"><input type="radio"><label for="">Urgent Check-up</label></div>
-                            <div class="option"><input type="radio"><label for="">Surgical Appointment</label></div>
+                            <div class="option"><input type="radio" name="status" id="routine" value="Routine Check-up"><label for="routine">Routine Check-up</label></div>
+                            <div class="option"><input type="radio" name="status" id="non-urgent" value="Non Urgent Check-up"><label for="non-urgent">Non Urgent Check-up</label></div>
+                            <div class="option"><input type="radio" name="status" id="urgent" value="Urgent Check-up"><label for="">Urgent Check-up</label></div>
+                            <div class="option"><input type="radio" name="status" id="surgical" value="Surgical Appointment"><label for="surgical">Surgical Appointment</label></div>
                         </ul>
                     </div>
                     <div class="form-section">
                         <p>Upload Previous Health Record</p>
-                        <button>Choose file</button><span>No file chosen</span>
+                        <input type="file" name="image" id="image">
                     </div>
                     <div class="form-section">
                         <p>Appointment Details</p>
-                        <input type="text" class="input2">
+                        <textarea name="details" id="" cols="30" rows="10"></textarea>
                     </div>
                     <button class="button">B O O K <span>A P P O I N T M E N T</span><i class="fas fa-arrow-right"></i></button>
                 </form>

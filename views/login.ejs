@@ -10,40 +10,7 @@
     </head>
     <body>
         
-        <div class="section">
-            <nav>
-                <img src="/images/Logo.jpg" alt = 'logo'>
-                <div class="navbar-menu">
-                    <ul type="none">  
-                        <li><a href="/doctors">Doctors</a></li>
-                        <li><a href="/hospitals">Hospitals</a></li>
-                        <li><a href="/treatment">Treatment</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
-                        <li><a href="/about">About</a></li>
-                    </ul>
-                </div>
-                <div class="navbar-buttons">
-                    <button class="login-button">
-                        Login / Sign Up
-                    </button>
-                    <button class="get-quote-button">
-                        Get a Quote
-                    </button>
-                </div>
-                <i class="fa fa-bars"></i>
-            </nav>
-        </div>
-        <div class="nav-dropdown">
-            <ul type="none">  
-                <li><a href="/doctors">Doctors</a></li>
-                <li><a href="/hospitals">Hospitals</a></li>
-                <li><a href="/treatment">Treatment</a></li>
-                <li><a href="/contact">Contact Us</a></li>
-                <li><a href="/about">About</a></li>
-                <li><button class="cross">X</button></li>
-            </ul>
-        </div>
-        <!-- navbar end -->
+        <%- include('partials/navbar')  %>
 
         <div class="main">
             <div class="box">

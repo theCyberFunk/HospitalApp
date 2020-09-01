@@ -32,15 +32,42 @@
             grid-template-columns: 100%;
             align-items: center;
             margin-top: 1rem;
-            div{
+            .gender{
+                display: grid;
+                grid-template-columns: 4rem 2rem auto 2rem auto 2rem auto;
+                p{
+                    margin: auto 0;
+                }
+                input{
+                    height: initial;
+                    width: initial;
+                    margin: auto;
+                }
+            }
+            #image{
+                height: 100%;
+                border: none;
+                width: fit-content;
+                height: initial;
+            }
+            .dob{
+                height: 100%;
+                display: grid;
+                grid-template-columns: auto 0.9fr;
+                align-items: center;
+                input{
+                    height: 80%;
+                }
+            }
+            .place{
                 width: 100%;
                 display: flex;
                 height: 100%;
                 justify-content: space-between;
                 align-items: center;
                 input{
-                    width: 45%;
-                    height: 80%;
+                    // width: 45%;
+                    // height: 80%;
                 }
             }
             input,button{

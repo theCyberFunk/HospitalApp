@@ -57,6 +57,7 @@ body{
                     }
                     i{
                         justify-self: end;
+                        cursor: pointer;
                     }
                     h4{
                         justify-self: start;
@@ -113,8 +114,8 @@ body{
         padding: 3rem 5rem 3rem 5rem;
     }
     .nav{
-        padding-top: initial;
-        padding-bottom: initial;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     .banner{

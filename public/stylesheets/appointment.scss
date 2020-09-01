@@ -60,6 +60,12 @@
                         justify-self: center;
                     }
                 }
+                #image{
+                    border: none;
+                    width: fit-content;
+                    height: fit-content;
+                    padding: 0;
+                }
                 input{
                     width: calc(100%-16px);
                     height: 80%;
