@@ -11,8 +11,10 @@
     <body>
         <%- include('partials/navbar')  %>
         
-        <main class="section">
-            <% if(currentUser.auth === 'user'){ %>
+        <!-- IF USER -->
+        <% if(currentUser.auth === 'user'){ %>
+        <main class="section main_user">
+            
             <div id="user">
                 <div id="image">
                     <img src= "<%= currentUser.image %>" alt="">
@@ -25,7 +27,7 @@
                     <li><i class="fas fa-flag"></i><span><%= currentUser.country %></span></li>
                 </ul>
             </div>
-            <% } %>
+            
             
             <div id="messages">
                 <% messages.forEach(function(message){ %>
@@ -43,14 +45,72 @@
             <div id="appointments">
                 <% appointments.forEach(function(appointment){ %>
                     <div class="appointment">
-                        <i class="fas "></i>
+                        <i class="fas fa-calendar-check"></i>
                         <ul type="none">
-                            
-                        </ul>
+                            <li id="status"><h4><%= appointment.status %></h4><span id="date" class="hidden"><%= appointment.date %></span></li>
+                            <li id="time"><%= appointment.time %></li>
+                            <li id="details" class="hidden"><p><%= appointment.details %></p></li>
+                            <% if(appointment.img){ %> 
+                                <li id="image" class="hidden"><img src="<%= appointment.img %>" alt="image"></li>
+                            <% }; %>    
+                            </ul>
                     </div>
-                    <% }); %>
+                <% }); %>
             </div>
         </main>
+        <% } %>
+
+
+        <!-- IF ADMIN -->
+        <% if(currentUser.auth === 'admin'){ %>
+        <main class="section main_admin">
+
+            <div id="users_admin">
+                <% users.forEach(function(user){ %>
+                    <div class="user">
+                        <i class="fas fa-user"></i>
+                        <ul type="none">
+                            <li id="name"><h4><%= user.name %></h4></li>
+                            <li id="email"><%= user.email %></li>
+                            <li id="gender" class="hidden"><%= user.gender %></li>
+                            <li id="dob" class="hidden"><%= user.dob %></li>
+                            <li id="location" class="hidden"><span><%= user.city %></span> <span><%= user.state %></span> <span><%= user.country %></span></li>
+                        </ul>
+                    </div>
+                <% }); %>
+            </div>
+
+
+            <div id="messages_admin">
+                <% messages.forEach(function(message){ %>
+                <div class="message">
+                    <i class="fas fa-envelope"></i>
+                    <ul type="none">
+                        <li id="name"><h4><%= message.name %></h4><span id="email" class="hidden"><%= message.email %></span></li>
+                        <li id="subject"><%= message.subject %></li>
+                        <p id="message" class="hidden"><%= message.message %></p>
+                    </ul>
+                </div>
+                <% }); %>
+            </div>
+    
+            <div id="appointments_admin">
+                <% appointments.forEach(function(appointment){ %>
+                    <div class="appointment">
+                        <i class="fas fa-calendar-check"></i>
+                        <ul type="none">
+                            <li id="status"><h4><%= appointment.status %></h4><span id="date" class="hidden"><%= appointment.date %></span></li>
+                            <li id="time"><%= appointment.time %></li>
+                            <li id="details" class="hidden"><p><%= appointment.details %></p></li>
+                            <% if(appointment.img){ %> 
+                                <li id="image" class="hidden"><img src="<%= appointment.img %>" alt="image"></li>
+                            <% }; %>    
+                            </ul>
+                    </div>
+                <% }); %>
+            </div>
+        </main>
+        <% } %>
 
     </body>
     <script type="text/javascript" src="/javascript/profile.js"></script>

@@ -174,9 +174,7 @@ nav .fa {
     display: none;
   }
   nav .navbar-buttons {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 0.5rem;
+    display: block;
   }
   nav .navbar-buttons button {
     height: 2rem;
@@ -185,13 +183,7 @@ nav .fa {
   }
   nav .navbar-buttons .login-button {
     background-color: white;
-    border-color: #021433;
-    border: 1px solid;
-  }
-  nav .navbar-buttons .get-quote-button {
-    background-color: #021433;
-    color: white;
-    border: none;
+    border: 1px solid #021433;
   }
 }
 .footer {
@@ -204,6 +196,9 @@ nav .fa {
 }
 .footer img {
   height: 40px;
+}
+.footer a {
+  text-decoration: none;
 }
 .footer h2 {
   color: white;
@@ -264,7 +259,11 @@ nav .fa {
   }
   .footer .icons {
     display: grid;
+    margin-right: 2rem;
     justify-self: end;
+  }
+  .footer a {
+    color: #021433;
   }
 }
 @media screen and (min-width: 769px) {
@@ -306,6 +305,9 @@ nav .fa {
     display: grid;
     margin-right: 2rem;
     justify-self: end;
+  }
+  .footer a {
+    color: #021433;
   }
 }
 .banner {

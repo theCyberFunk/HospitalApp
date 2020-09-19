@@ -113,7 +113,7 @@ body{
     .section{
         padding: 3rem 5rem 3rem 5rem;
     }
-    .nav{
+    .navbar{
         padding-top: 0;
         padding-bottom: 0;
     }
@@ -137,6 +137,12 @@ body{
         p{
             line-height: 1.5rem;
         }
+    }
+
+
+    .help , .footer{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 
 }

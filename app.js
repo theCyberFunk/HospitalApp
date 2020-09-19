@@ -3,6 +3,7 @@ var express       = require('express');
 var path          = require('path');
 var cookieParser  = require('cookie-parser');
 var logger        = require('morgan');
+var flash         = require("connect-flash");
 var mongoose      = require('mongoose');
 var passport      = require("passport");
 var LocalStrategy = require("passport-local");
@@ -10,7 +11,6 @@ var User          = require("./models/user");
 
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 
 
 var app = express();
@@ -25,16 +25,13 @@ mongoose.connect("mongodb+srv://aditya:aditya@cluster0.3xhxi.mongodb.net/hospita
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(flash());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use((req, res, next)=>{
-    res.locals.currentUser = req.user;
-    next();
-})
 
 
 // passport config
@@ -50,9 +47,17 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 
+
+app.use((req, res, next)=>{
+  res.locals.currentUser = req.user;
+  res.locals.error = req.flash("error");
+  res.locals.success = req.flash("success");
+  next();
+})
+
+
 // routes config
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 
 // catch 404 and forward to error handler

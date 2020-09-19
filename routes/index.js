@@ -76,7 +76,7 @@ router.get("/logout", function(req, res){
 
 
 // PROFILE
-router.get('/profile', function(req, res, next) {
+router.get('/profile', middleware.isLoggedIn ,  function(req, res, next) {
   
   if(req.user.auth === "admin"){
       Message.find({},function (err, messages){ 
@@ -130,7 +130,7 @@ router.get('/hospitals', function(req, res, next) {
 router.get('/appointment', function(req, res, next) {
   res.render('appointment' , {currentUser: req.user});
 });
-router.post('/appointment', middleware.upload.single('image'), function(req, res, next) {
+router.post('/appointment', middleware.isLoggedIn , middleware.upload.single('image'), function(req, res, next) {
   
   var newAppointment = new Appointment({ 
     date:     req.body.date, 
@@ -173,7 +173,7 @@ router.get('/treatment', function(req, res, next) {
 router.get('/contact', function(req, res, next) {
   res.render('contact' , {currentUser: req.user});
 });
-router.post('/contact', function(req, res, next) {
+router.post('/contact', middleware.isLoggedIn , function(req, res, next) {
   var newMessage = new Message({ 
     name:     req.body.name, 
     email:    req.body.email,

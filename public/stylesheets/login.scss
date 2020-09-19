@@ -2,11 +2,14 @@
 @import 'partials/navbar';
 
 
-
+html,body{
+    min-height: 100%;
+    height: 100%;
+}
 .main{
     background-color: root.$lightblue;
     width: 100%;
-    height: 45rem;
+    height: 100%;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto 5rem;
@@ -89,10 +92,9 @@
 
 @media screen and (min-width: 412px) and (max-width: 768px){
     .main{
-        height: 65rem;
         .box{
-            width: 70%;
-            height: 25rem;
+            width: 60%;
+            height: 20rem;
             form{
                 button{
                     padding-left: 37%;
@@ -101,10 +103,6 @@
                     }
                 }
             }
-        }
-        .footer{
-            align-self: end;
-            margin-bottom: 2rem;
         }
     }
 }
@@ -119,7 +117,6 @@
         padding-right: 5rem;
     }
     .main{
-        height: 75rem;
         .box{
             width: 40%;
             height: 23rem;
@@ -131,10 +128,6 @@
                     }
                 }
             }
-        }
-        .footer{
-            align-self: end;
-            margin-bottom: 2rem;
         }
     }
 }

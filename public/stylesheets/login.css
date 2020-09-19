@@ -150,6 +150,24 @@ nav .fa {
   color: #021433;
 }
 
+.flash {
+  width: 100%;
+  height: 3rem;
+}
+.flash .alert {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  font-weight: bold;
+}
+.flash .alert-danger {
+  background-color: #fa7777;
+}
+.flash .alert-success {
+  background-color: #92fa62;
+}
+
 @media screen and (min-width: 769px) {
   nav {
     height: 5rem;
@@ -173,9 +191,7 @@ nav .fa {
     display: none;
   }
   nav .navbar-buttons {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 0.5rem;
+    display: block;
   }
   nav .navbar-buttons button {
     height: 2rem;
@@ -184,19 +200,18 @@ nav .fa {
   }
   nav .navbar-buttons .login-button {
     background-color: white;
-    border-color: #021433;
-    border: 1px solid;
-  }
-  nav .navbar-buttons .get-quote-button {
-    background-color: #021433;
-    color: white;
-    border: none;
+    border: 1px solid #021433;
   }
 }
+html, body {
+  min-height: 100%;
+  height: 100%;
+}
+
 .main {
   background-color: #8fcaf1;
   width: 100%;
-  height: 45rem;
+  height: 100%;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto 5rem;
@@ -274,22 +289,15 @@ nav .fa {
 }
 
 @media screen and (min-width: 412px) and (max-width: 768px) {
-  .main {
-    height: 65rem;
-  }
   .main .box {
-    width: 70%;
-    height: 25rem;
+    width: 60%;
+    height: 20rem;
   }
   .main .box form button {
     padding-left: 37%;
   }
   .main .box form button i {
     margin-left: 50%;
-  }
-  .main .footer {
-    align-self: end;
-    margin-bottom: 2rem;
   }
 }
 @media screen and (min-width: 769px) {
@@ -298,9 +306,6 @@ nav .fa {
     padding-right: 5rem;
   }
 
-  .main {
-    height: 75rem;
-  }
   .main .box {
     width: 40%;
     height: 23rem;
@@ -310,10 +315,6 @@ nav .fa {
   }
   .main .box form button i {
     margin-left: 45%;
-  }
-  .main .footer {
-    align-self: end;
-    margin-bottom: 2rem;
   }
 }
 
