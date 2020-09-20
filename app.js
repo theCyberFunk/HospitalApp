@@ -21,6 +21,7 @@ mongoose.connect("mongodb+srv://aditya:aditya@cluster0.3xhxi.mongodb.net/heroku-
 });
 
 
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
