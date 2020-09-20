@@ -2,7 +2,7 @@
 <br/>
 
 ### Introduction
-This project is an operational sample of a real-world hospital web-app. Each page is hand-crafted(html/sass) to follow a certain theme and srtucture. Some parts of this project are still work in progress.
+This project is an operational sample of a real-world hospital web-app. Each page is hand-crafted(html/sass) to follow a certain theme and srtucture. The web pages are responsive and are viewable in a mobile phone, a tablet and on a PC as well. Some parts of this project are still work in progress.
 <br/>
 
 ### What this application includes:
