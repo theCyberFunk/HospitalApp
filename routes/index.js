@@ -43,9 +43,11 @@ router.post('/signup', middleware.upload.single('image'), function(req, res, nex
   User.register(newUser, req.body.password, (err, user)=>{
     if(err){
       console.log(err);
+      req.flash('error', 'Registration Unsuccessful.');
       return res.render('signup');
     }
     passport.authenticate("local")(req, res, ()=>{
+      req.flash('success', 'You have been successfully registered.');
       res.redirect('/');
     });
   });
@@ -70,6 +72,7 @@ router.post('/login', passport.authenticate("local",
 // LOGOUT
 router.get("/logout", function(req, res){
   req.logout(); // part of the packages
+  req.flash('success', 'Logged you out.');
   res.redirect("/");
 });
 
@@ -155,6 +158,7 @@ router.post('/appointment', middleware.isLoggedIn , middleware.upload.single('im
           })
         }
       })
+      req.flash('success', 'Your appointment has been fixed.');
       res.redirect("/profile")
     }
   });
@@ -196,6 +200,7 @@ router.post('/contact', middleware.isLoggedIn , function(req, res, next) {
           })
         }
       })
+      req.flash('success', 'We have recieved your message.');
       res.redirect("/profile")
     }
   });

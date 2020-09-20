@@ -42,23 +42,7 @@ nav{
         }
     }
 }
-.flash{
-    width: 100%;
-    height: 3rem;
-    .alert{
-        width: 100%;
-        height: 100%;
-        display: grid;
-        place-content: center;
-        font-weight: bold;
-    }
-    .alert-danger{
-        background-color: rgb(250, 119, 119);
-    }
-    .alert-success{
-        background-color: rgb(146, 250, 98);
-    }
-}
+
 
 
 @media screen and (min-width: 769px){
