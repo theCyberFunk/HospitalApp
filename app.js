@@ -14,7 +14,7 @@ var indexRouter = require('./routes/index');
 
 
 var app = express();
-mongoose.connect("mongodb+srv://aditya:aditya@cluster0.3xhxi.mongodb.net/heroku-hospitalapp?retryWrites=true&w=majority",{
+mongoose.connect("mongodb+srv://aditya:aditya@cluster0.3xhxi.mongodb.net/hospitalapp?retryWrites=true&w=majority",{
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true

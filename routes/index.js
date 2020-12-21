@@ -1,11 +1,12 @@
-const passport  = require('passport');
-var express     = require('express');
-var router      = express.Router();
-var middleware  = require("../middleware");
-var User        = require("../models/user");
-var Message     = require("../models/message");
-var Appointment = require("../models/appointment");
-
+const passport      = require('passport');
+const express       = require('express');
+const router        = express.Router();
+const middleware    = require("../middleware");
+const User          = require("../models/user");
+const Message       = require("../models/message");
+const Appointment   = require("../models/appointment");
+const Doctor        = require("../models/doctors");
+const Hospital      = require("../models/hospitals");
 
 
 // INDEX
@@ -232,9 +233,12 @@ module.exports = router;
 // TEST ROUTE
 router.get('/test', function(req, res, next) {
   
-  User.find({name: "Aditya"}).populate('messages').populate('appointments').exec(function(err, user){
-    console.log(user.messages);
-    res.render("test", {user:user})
+  // User.find({name: "Aditya"}).populate('messages').populate('appointments').exec(function(err, user){
+  //   console.log(user.messages);
+  //   res.render("test", {user:user})
+  // })
+  Doctor.find({}, (err, doctors)=>{
+    // res.render("test", { data : doctors });
+    res.json( doctors );
   })
-  
 });
