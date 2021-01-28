@@ -83,25 +83,30 @@ router.get("/logout", function(req, res){
 router.get('/profile', middleware.isLoggedIn ,  function(req, res, next) {
   
   if(req.user.auth === "admin"){
-      Message.find({},function (err, messages){ 
-      if (err) {
-        console.log(err);
-      } else {
-        User.find({auth: 'user'}, function(err, users){
-          if (err) {
-            console.log(err);
-          } else{
-            Appointment.find({}, function(err, appointments){
-              if (err) {
-                console.log(err);
-              }else{
-                res.render('profile', {currentUser: req.user, messages:messages, users:users, appointments:appointments})
-              }
-            })
-          }
-        });
+    
+    let alldata = [];
+    
+    const getdata = (Collection) => {
+      return Collection.find({},function (err, data){ 
+        if (err) {
+          console.log(err);
+        } else {
+          alldata.push(data)
+        }
+      })
+    }
+      
+    const setdata = async () => {
+      try{
+        await getdata(Message)
+        await getdata(User)
+        await getdata(Appointment)
+        res.render('profile', {currentUser: req.user, messages:alldata[0], users:alldata[1], appointments:alldata[2]})
+      } catch (e) {
+          console.error(e);
       }
-    });
+    }
+    setdata();
   }
   
   if(req.user.auth === "user"){
