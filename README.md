@@ -11,7 +11,7 @@ This project is an operational sample of a real-world hospital web-app. Each pag
 
 1. #### Index page
    - Home page
-   - Search bar (work in progress)
+   - Search bar
    - Procedures, Services, Doctors etc.
 2. #### Login/Signup pages
 3. #### Profile page
