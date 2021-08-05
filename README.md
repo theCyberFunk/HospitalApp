@@ -15,7 +15,7 @@ This project is an operational sample of a real-world hospital web-app. Each pag
    - Procedures, Services, Doctors etc.
 2. #### Login/Signup pages
 3. #### Profile page
-   - Shows all the users, messages, appointments if the logged in account is an admin. ( Admin status of an account is set by the database administrator. )
+   - Shows all the users, messages, appointments if the logged in account is an admin.
    - Shows the details, messages and appointments of the user if the logged in account is a normal user.
 4. #### Doctors/Hospitals pages
    - Have links to appointments and contact-us page. 
